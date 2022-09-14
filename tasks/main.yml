@@ -21,7 +21,7 @@
         name: '{{ item }}'
         owner: '{{ memcache_daemon_user }}'
         group: '{{ memcache_daemon_group }}'
-        mode: 0755
+        mode: '755'
         state: directory
       loop:
         - '{{ memcache_log_file|dirname }}'
@@ -33,7 +33,7 @@
         dest: /etc/memcached.conf
         owner: root
         group: root
-        mode: 0644
+        mode: '644'
       notify: restart memcache
 
     - name: Detect memcache init script
