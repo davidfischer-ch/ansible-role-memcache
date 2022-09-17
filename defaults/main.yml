@@ -1,14 +1,16 @@
-# packages
+# Packages
 memcache_packages:
   - memcached
-# daemon
+
+# Daemon
 memcache_config_file: memcached.conf.j2
 memcache_daemon_group: memcache
 memcache_daemon_user: memcache
 memcache_pid_file: /var/run/memcached/memcached.pid
 memcache_log_file: /var/log/memcached/memcached.log
 memcache_read_timeout: 2
-# miscellaneous configuration
+
+# Miscellaneous configuration
 memcache_backlog_queue_limit: 1024
 memcache_binding_protocol: auto
 memcache_cas_enabled: yes
@@ -24,7 +26,8 @@ memcache_memory_use_large_pages: no
 memcache_sasl_enabled: no
 memcache_threads: '{{ ansible_processor_cores }}'
 memcache_verbosity_level: off
-# networking
+
+# Networking
 memcache_bind_addresses:
   - 127.0.0.1
 memcache_interface: null
